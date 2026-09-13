@@ -1690,7 +1690,7 @@ alt="Memory 6"
 گوشه‌ای از دنیای تو 💎
 
 <small>
-نه عکس از قشنگ‌ترین دختر دنیای من ❤️
+ عکس از قشنگ‌ترین دختر دنیای من ❤️
 </small>
 
 </div>
@@ -2136,14 +2136,13 @@ revealCards,
 const music =
 document.getElementById("loveMusic");
 
-music.volume=.7;
+music.volume = .7;
 
 loadSong(currentSong);
 
-/*
-موزیک به صورت خودکار پخش نمی‌شود.
-کاربر باید خودش روی پخش بزند.
-*/
+music.play().catch(()=>{
+    console.log("پخش خودکار توسط مرورگر مسدود شد.");
+});
 
 }else{
 
